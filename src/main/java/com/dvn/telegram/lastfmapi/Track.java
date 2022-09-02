@@ -1,4 +1,4 @@
-package com.dvn.telegram;
+package com.dvn.telegram.lastfmapi;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;

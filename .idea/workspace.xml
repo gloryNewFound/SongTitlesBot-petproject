@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/Track.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/XmlTrackParser.java" afterDir="false" />
+    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="XML Parser was created">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XMLHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/TrackSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/TrackSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/TrackSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/XMLHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/XmlTrackParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -57,7 +60,7 @@
       <module name="DVNBot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dvn.telegram.*" />
+          <option name="PATTERN" value="com.dvn.telegram.lastfmapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -66,11 +69,11 @@
       </method>
     </configuration>
     <configuration name="TrackSearcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.TrackSearcher" />
+      <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.lastfmapi.TrackSearcher" />
       <module name="DVNBot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dvn.telegram.*" />
+          <option name="PATTERN" value="com.dvn.telegram.lastfmapi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662048915564</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="XML Parser was created">
+      <created>1662134085915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662134085915</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="XML Parser was created" />
+    <option name="LAST_COMMIT_MESSAGE" value="XML Parser was created" />
   </component>
 </project>
