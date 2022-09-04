@@ -3,12 +3,18 @@ package com.dvn.telegram.lastfmapi;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonAutoDetect
+
 public class Track {
-    @JsonProperty("name")
+
     public String title;
     public String artist;
     public int listeners;
+
+    public Track(String title, String artist, int listeners) {
+        this.title = title;
+        this.artist = artist;
+        this.listeners = listeners;
+    }
 
     @Override
     public String toString() {
