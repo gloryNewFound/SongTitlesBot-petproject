@@ -15,13 +15,19 @@ import java.util.List;
 
 public class XmlTrackParser {
 
+    public static List<Track> tracks = new ArrayList<>();
     public void parseXMLResponse(String xmlString) throws ParserConfigurationException, SAXException, IOException {
+        tracks.clear();
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
         AdvancedXmlHandler handler = new AdvancedXmlHandler();
         XMLReader reader = parser.getXMLReader();
         reader.setContentHandler(handler);
         reader.parse(new InputSource(new StringReader(xmlString)));
+
+        for (Track track: tracks) {
+            System.out.println(track.toString());
+        }
 
     }
 
@@ -50,7 +56,7 @@ public class XmlTrackParser {
                 return;
             }
 
-            tagText = tagText.replace(" ", "").trim();
+            //tagText = tagText.replace(" ", "").trim();
 
             if (currentElementName.equals("name")) {
                 title = tagText;
@@ -72,7 +78,7 @@ public class XmlTrackParser {
         @Override
         public void endElement(String uri, String localName, String qName) {
             if ( (title != null && !title.isEmpty()) && (artist != null && !artist.isEmpty()) && (listeners >= 0) ) {
-                TrackSearcher.tracks.add(new Track(title, artist, listeners));
+                tracks.add(new Track(title, artist, listeners));
                 title = null;
                 artist = null;
                 listeners = -1;

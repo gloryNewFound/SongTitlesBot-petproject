@@ -1,5 +1,6 @@
 package com.dvn.telegram;
 
+import com.dvn.telegram.lastfmapi.TrackSearcher;
 import lombok.SneakyThrows;
 import org.telegram.telegrambots.bots.DefaultAbsSender;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
@@ -10,6 +11,10 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 public class DVNBot extends TelegramLongPollingBot {
 
@@ -42,10 +47,21 @@ public class DVNBot extends TelegramLongPollingBot {
             if (message.hasText()) {
                 execute(SendMessage.builder()
                         .chatId(message.getChatId().toString()).
-                        text("Foxtrot Uniform Charlie Kilo").build());
+                        text(getTrack(message.getText())).build());
             }
         }
     }
 
-
+    private static String getTrack(String message) throws ParserConfigurationException, IOException, SAXException {
+        TrackSearcher trackSearcher = new TrackSearcher();
+        String response = "Ты имеешь в виду " +
+                trackSearcher.findTrack(message).getTitle() +
+                " by " +
+                trackSearcher.findTrack(message).getArtist() +
+                ", которую слушает " +
+                trackSearcher.findTrack(message).getListeners() +
+                " человек(а)?";
+        trackSearcher = null;
+        return response;
+    }
 }

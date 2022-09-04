@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="Manor changes">
+    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="Searcher for 100 tracks is finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/DVNBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/DVNBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XMLHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,7 @@
       <recent name="com.dvn.telegram" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TrackSearcher">
+  <component name="RunManager" selected="Application.DVNBot">
     <configuration name="DVNBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.DVNBot" />
       <module name="DVNBot" />
@@ -82,8 +81,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TrackSearcher" />
         <item itemvalue="Application.DVNBot" />
+        <item itemvalue="Application.TrackSearcher" />
       </list>
     </recent_temporary>
   </component>
@@ -117,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662134709751</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Searcher for 100 tracks is finished">
+      <created>1662279346354</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662279346354</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +141,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="XML Parser was created" />
     <MESSAGE value="Manor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manor changes" />
+    <MESSAGE value="Searcher for 100 tracks is finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Searcher for 100 tracks is finished" />
   </component>
 </project>
