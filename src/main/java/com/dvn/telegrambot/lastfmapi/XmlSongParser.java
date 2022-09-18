@@ -1,4 +1,4 @@
-package com.dvn.telegram.lastfmapi;
+package com.dvn.telegrambot.lastfmapi;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;

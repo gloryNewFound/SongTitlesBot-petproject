@@ -1,8 +1,9 @@
-package com.dvn.telegram;
+package com.dvn.telegrambot;
 
-import com.dvn.telegram.lastfmapi.Song;
-import com.dvn.telegram.lastfmapi.SongSearcher;
+import com.dvn.telegrambot.lastfmapi.Song;
+import com.dvn.telegrambot.lastfmapi.SongSearcher;
 
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -12,8 +13,19 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 
+@Component("botBean")
 public class SongTitlesBot extends TelegramLongPollingBot {
-    String receivedMessage;
+
+    //Constructor
+    public SongTitlesBot() {
+        TelegramBotsApi telegramBotsApi = null;
+        try {
+            telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
+            telegramBotsApi.registerBot(this);
+        } catch (TelegramApiException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public String getBotUsername() {
@@ -25,11 +37,6 @@ public class SongTitlesBot extends TelegramLongPollingBot {
         return "5564797213:AAFtzd0ICkugI4huupDJAu4teSfv8xCV_D0";
     }
 
-    public static void main(String[] args) throws TelegramApiException {
-        SongTitlesBot bot = new SongTitlesBot();
-        TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
-        telegramBotsApi.registerBot(bot);
-    }
 
     @Override
     public void onRegister() {
@@ -39,15 +46,12 @@ public class SongTitlesBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage()) {
-            Message message = update.getMessage();
-            System.out.println("--------------------------------------------");
-            System.out.println("Message \"" + message.getText()
-                    + "\" was received from " + message.getFrom().getUserName());
+            Message receivedMessage = update.getMessage();
 
-            if (message.hasText()) {
+            if (receivedMessage.hasText()) {
                 SendMessage reply = new SendMessage(
-                        message.getChatId().toString(),
-                        getAnswer(message.getText())
+                        receivedMessage.getChatId().toString(),
+                        getAnswer(receivedMessage)
                     );
 
                 try {
@@ -56,14 +60,15 @@ public class SongTitlesBot extends TelegramLongPollingBot {
                     System.out.println(e.getStackTrace());
                 }
             }
+            receivedMessage = null;
         }
     }
 
-    public static String getAnswer(String message) {
+    public String getAnswer(Message message) {
 
         //start of the searching for the tracks by the text of the received message
         SongSearcher songSearcher = new SongSearcher();
-        Song song = songSearcher.findSong(message);
+        Song song = songSearcher.findSong(message.getText());
 
         String answer = "Ты имеешь в виду "
                 + song.getTitle() + " by "

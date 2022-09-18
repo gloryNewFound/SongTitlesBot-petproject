@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/MyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/aspects/LoggingAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/aspects/Pointcuts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/SongTitlesBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/lastfmapi/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/lastfmapi/SongSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegrambot/lastfmapi/XmlSongParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +67,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="SongTitlesBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.SongTitlesBot" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dvn.telegrambot.Main" />
       <module name="DVNBot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dvn.telegram.*" />
+          <option name="PATTERN" value="com.dvn.telegrambot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,7 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SongTitlesBot" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661785866260</updated>
-      <workItem from="1663496445847" duration="9369000" />
+      <workItem from="1663496445847" duration="14119000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1662048915564</created>
@@ -134,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663501129943</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactoring">
+      <created>1663507813323</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663507813323</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

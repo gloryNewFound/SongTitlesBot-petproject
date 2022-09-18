@@ -1,4 +1,4 @@
-package com.dvn.telegram.lastfmapi;
+package com.dvn.telegrambot.lastfmapi;
 
 
 public class Song {
