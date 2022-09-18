@@ -1,4 +1,4 @@
-# DVNBot
+# SongTitlesBot
 Telegram bot answers with song titles
 
 
