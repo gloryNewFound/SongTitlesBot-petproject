@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class SongSearcher {
 
+
     public Song findSong(String message) {
 
         String url = getSearchURL(message);
@@ -18,6 +19,8 @@ public class SongSearcher {
         XmlSongParser songParser = new XmlSongParser();
         songParser.parseXMLResponse(xmlResponse);
         Song song = getSongForAnswer(); //Randomly chooses a song from the list of the GET request from the LastFM API
+        System.out.println("Offered song " + song);
+        System.out.println("--------------------------------------------");
         return song;
     }
 
@@ -32,7 +35,7 @@ public class SongSearcher {
         try {
             url = new URL(searchURL);
         } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getStackTrace());
         }
 
         HttpURLConnection connection = sendRequestToLastFM(url);
@@ -63,7 +66,7 @@ public class SongSearcher {
     }
     private Song getSongForAnswer() {
         Random random = new Random();
-        return XmlSongParser.songs.get(random.nextInt(10));
+        return XmlSongParser.songs.get(random.nextInt(XmlSongParser.songs.size()));
     }
 
 }

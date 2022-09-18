@@ -24,9 +24,9 @@ public class XmlSongParser {
         try {
             parser = factory.newSAXParser();
         } catch (ParserConfigurationException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getStackTrace());
         } catch (SAXException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getStackTrace());
         }
         AdvancedXmlHandler handler = new AdvancedXmlHandler();
         XMLReader reader = null;
@@ -36,14 +36,15 @@ public class XmlSongParser {
             reader.setContentHandler(handler);
             reader.parse(new InputSource(new StringReader(xmlString)));
         } catch (SAXException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getStackTrace());
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getStackTrace());
         }
 
-        for (Song song: songs) {
-            System.out.println(song.toString());
-        }
+
+//        for (Song song: songs) {
+//            System.out.println(song.toString());
+//        }
 
     }
 

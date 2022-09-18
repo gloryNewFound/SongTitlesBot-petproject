@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="it's alive!">
+    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="Refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/DVNBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +27,14 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="5be690d1-25da-4db5-a8fc-431bfdbbdf37" />
+        <option name="url" value="https://github.com/gloryNewFound/DVNBot.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,9 +50,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dvn/Projects/SpecialforDVNBot/DVNBot",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "last_opened_file_path": "C:/Users/dvn/Libs/AspectJ/aspectjweaver-1.9.9.1.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
@@ -83,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661785866260</updated>
-      <workItem from="1663496445847" duration="4659000" />
+      <workItem from="1663496445847" duration="9369000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1662048915564</created>
@@ -120,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662282528216</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring">
+      <created>1663501129943</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663501129943</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +157,7 @@
     <MESSAGE value="Manor changes" />
     <MESSAGE value="Searcher for 100 tracks is finished" />
     <MESSAGE value="it's alive!" />
-    <option name="LAST_COMMIT_MESSAGE" value="it's alive!" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>
