@@ -13,20 +13,36 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XmlTrackParser {
+public class XmlSongParser {
 
-    public static List<Track> tracks = new ArrayList<>();
-    public void parseXMLResponse(String xmlString) throws ParserConfigurationException, SAXException, IOException {
-        tracks.clear();
+    public static List<Song> songs = new ArrayList<>(); //tracks for the response to the bot
+    public void parseXMLResponse(String xmlString) {
+        songs.clear();
         SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser = factory.newSAXParser();
-        AdvancedXmlHandler handler = new AdvancedXmlHandler();
-        XMLReader reader = parser.getXMLReader();
-        reader.setContentHandler(handler);
-        reader.parse(new InputSource(new StringReader(xmlString)));
 
-        for (Track track: tracks) {
-            System.out.println(track.toString());
+        SAXParser parser = null;
+        try {
+            parser = factory.newSAXParser();
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        } catch (SAXException e) {
+            throw new RuntimeException(e);
+        }
+        AdvancedXmlHandler handler = new AdvancedXmlHandler();
+        XMLReader reader = null;
+
+        try {
+            reader = parser.getXMLReader();
+            reader.setContentHandler(handler);
+            reader.parse(new InputSource(new StringReader(xmlString)));
+        } catch (SAXException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        for (Song song: songs) {
+            System.out.println(song.toString());
         }
 
     }
@@ -35,12 +51,12 @@ public class XmlTrackParser {
         private String title;
 
         @Override
-        public void startDocument() throws SAXException {
+        public void startDocument() {
             //System.out.println("Start parsing");
         }
 
         @Override
-        public void endDocument() throws SAXException {
+        public void endDocument() {
             //System.out.println("Finish parsing");
         }
 
@@ -78,7 +94,7 @@ public class XmlTrackParser {
         @Override
         public void endElement(String uri, String localName, String qName) {
             if ( (title != null && !title.isEmpty()) && (artist != null && !artist.isEmpty()) && (listeners >= 0) ) {
-                tracks.add(new Track(title, artist, listeners));
+                songs.add(new Song(title, artist, listeners));
                 title = null;
                 artist = null;
                 listeners = -1;

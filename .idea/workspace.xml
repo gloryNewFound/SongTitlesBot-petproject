@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="Searcher for 100 tracks is finished">
+    <list default="true" id="06afb19a-d3f6-4ac9-ad7e-cbf136395aec" name="Changes" comment="it's alive!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/DVNBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/DVNBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/DVNBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/SongTitlesBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/TrackSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/SongSearcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlTrackParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dvn/telegram/lastfmapi/XmlSongParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,43 +37,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dvn/Projects/SpecialforDVNBot/DVNBot&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/dvn/Projects/SpecialforDVNBot/DVNBot",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.dvn.telegram" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DVNBot">
-    <configuration name="DVNBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.DVNBot" />
+  <component name="RunManager">
+    <configuration name="SongTitlesBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.SongTitlesBot" />
       <module name="DVNBot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dvn.telegram.lastfmapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrackSearcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dvn.telegram.lastfmapi.TrackSearcher" />
-      <module name="DVNBot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.dvn.telegram.lastfmapi.*" />
+          <option name="PATTERN" value="com.dvn.telegram.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,8 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DVNBot" />
-        <item itemvalue="Application.TrackSearcher" />
+        <item itemvalue="Application.SongTitlesBot" />
       </list>
     </recent_temporary>
   </component>
@@ -94,6 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661785866260</updated>
+      <workItem from="1663496445847" duration="4659000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1662048915564</created>
@@ -123,8 +113,18 @@
       <option name="project" value="LOCAL" />
       <updated>1662279346354</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="it's alive!">
+      <created>1662282528216</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662282528216</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -142,6 +142,7 @@
     <MESSAGE value="XML Parser was created" />
     <MESSAGE value="Manor changes" />
     <MESSAGE value="Searcher for 100 tracks is finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Searcher for 100 tracks is finished" />
+    <MESSAGE value="it's alive!" />
+    <option name="LAST_COMMIT_MESSAGE" value="it's alive!" />
   </component>
 </project>
